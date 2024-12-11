@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    Services List
+{% endblock %}
+{% block content %}
+{% if most_requested_services %}
+    <ul>
+        {% for service in most_requested_services %}
+        
+            <li>
+                {% if user.is_customer %}
+                <p>service name: <a href="{% url 'request_service' service.id %}"> {{ service.name }}</p></a>
+                {% else %}
+                <p>service name:  {{ service.name }}</p>
+                {% endif %}
+                 <p> Requested {{ service.request_count }} times </p> 
+                 <p> service price per hour: {{service.price_hour}} $</p>
+                 <p>service category: {{service.field}}</p>
+                 <p>created on: {{service.date}}</p>
+                 <p> Created by: {{service.company.user.username}}</p></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No most requested services available.</p>
+{% endif %}
+
+    
+     
+{% endblock %}

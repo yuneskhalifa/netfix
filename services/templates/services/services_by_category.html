@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    Services in {{ category_name }}
+{% endblock %}
+{% block content %}
+    <h1>Services in {{ category_name }}</h1>
+
+    {% if services %}
+        <ul>
+            {% for service in services %}
+                <li>
+                   Service Name:  <a href="{% url 'single_service' service.id %}">{{ service.name }}</a> 
+                  <br>
+                    Service Description: {{ service.description }} 
+                    <br>
+                    Service Price/Hour: {{service.price_hour}}$
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No services available in this category.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'main/base.html' %}
+{% block title %}Request Service{% endblock %}
+{% block content %}
+    <h1>Request a Service</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Request</button>
+    </form>
+{% endblock %}

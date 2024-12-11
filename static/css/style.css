@@ -1,0 +1,922 @@
+/* General Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f6f4;
+  color: #333;
+}
+
+header {
+  background-color: #ed8427;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Navigation Bar */
+nav.navbar {
+  background-color: #e35d15;
+  padding: 1rem;
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #eaad08;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+main h2 {
+  color: #4a90e2;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Footer */
+
+
+.headline{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headline1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.services_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service_section {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service_section h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.service_section p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background:white;
+  padding: 0 20px;
+  
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #444;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition:  0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+
+.navbar a:hover {
+  background: #555;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #e35d15;
+  color: #efefef;
+  text-decoration: none;
+  padding: 10px 16px;
+  transition:  0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: -1px;
+  border-radius: 1px;
+  border-color:#e35d15;
+  top: 100%; /* Ensures the dropdown is directly below the button */
+  left: 0; /* Aligns the dropdown to the left of the button */
+}
+
+.dropdown-content {
+  display: none;
+  position:absolute;
+  background-color: #ebba09;
+  min-width: 200px;
+
+}
+
+.dropdown-content a {
+  color: #fff0f0;
+  padding: 10px 0px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  transition:  0.3s ease;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background: #eb7f0c;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #555;
+}
+
+main {
+  margin: 20px auto;
+  text-align: center;
+  
+}
+
+main h1 {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .dropdown-content {
+      position: static;
+      box-shadow: none;
+      width: 100%;
+      border-radius: 0;
+  }
+
+  .dropdown-content a {
+      text-align: center;
+  }
+
+  main h1 {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.8rem;
+  }
+
+  .navbar a {
+      font-size: 0.9rem;
+  }
+
+  .dropdown .dropbtn {
+      font-size: 0.9rem;
+  }
+
+  main h1 {
+      font-size: 1.2rem;
+      padding: 0 10px;
+  }
+}
+
+/* Container for the entire page */
+.choice_text {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #444;
+}
+
+.choice {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.choice:hover {
+  transform: scale(1.05);
+}
+
+.company.img, .img {
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.company.img a, .img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.company.img:hover, .img:hover {
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.label_images {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #1f62a9;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .choice {
+      width: 90%;
+  }
+
+  .choice_text {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+  }
+
+  .company.img, .img {
+      height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .choice_text {
+      font-size: 1rem;
+      margin-bottom: 15px;
+  }
+
+  .choice {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .company.img, .img {
+      height: 150px;
+  }
+
+  .label_images, p {
+      font-size: 1rem;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+form {
+  width: 100%;
+}
+
+form p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f06108;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+form button:active {
+  background-color: #004085;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+ul li.success {
+  color: #28a745;
+}
+
+ul li.error {
+  color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  .container {
+      padding: 30px;
+  }
+
+  h2 {
+      font-size: 1.8rem;
+  }
+
+  form input {
+      font-size: 0.9rem;
+  }
+
+  form button {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 20px;
+  }
+
+  h2 {
+      font-size: 1.6rem;
+  }
+
+  form input {
+      font-size: 0.8rem;
+  }
+
+  form button {
+      font-size: 0.8rem;
+  }
+}
+
+
+
+
+
+
+
+/* Create Service Button */
+.create_service {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.create_service:hover {
+  background-color: #1358a6;
+}
+
+/* Services List Container */
+.services_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual Service Section */
+.service_section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service_section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service_section p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.service_section a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #1a73e8;
+  text-decoration: none;
+  border: 1px solid #1a73e8;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service_section a:hover {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+      font-size: 1.5rem;
+  }
+
+  .create_service {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+  }
+
+  .service_section p {
+      font-size: 0.9rem;
+  }
+
+  .service_section a {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+  }
+}
+
+
+
+
+
+
+
+/* Styling for the services list */
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+li {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Links inside the list */
+li a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+/* Service description and price */
+li {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+p {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  li {
+      font-size: 0.85rem;
+  }
+
+  li a {
+      font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Header Section for Profile */
+div[style="display: ruby;"] {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+div[style="display: ruby;"] h1 {
+  font-size: 1.8rem;
+  color: #1a73e8;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+div[style="display: ruby;"] p {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0 0;
+}
+
+div[style="display: ruby;"] p:last-child {
+  float: right;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Section Titles */
+.title {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Service or Request List */
+.list_services_profile,
+div > div {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px auto;
+  max-width: 700px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.list_services_profile:hover,
+div > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.list_services_profile a {
+  font-size: 1.2rem;
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.list_services_profile a:hover {
+  text-decoration: underline;
+}
+
+/* Line Divider */
+.line {
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Highlight Total Cost */
+strong {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  div[style="display: ruby;"] h1 {
+      font-size: 1.5rem;
+  }
+
+  div[style="display: ruby;"] p {
+      font-size: 0.9rem;
+  }
+
+  .list_services_profile,
+  div > div {
+      font-size: 0.9rem;
+  }
+
+  .title {
+      font-size: 1.3rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* Header and Title */
+.service_info_header {
+  background-color: #eac318;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.service_info_header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.service_info_header h5 {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.service_info_header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.service_info_header a:hover {
+  text-decoration: underline;
+}
+
+/* Section for the service details */
+h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+
+/* Button styling */
+.like_button {
+  display: inline-block;
+  background-color: #dba226;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.like_button:hover {
+  background-color: #dcb227;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .service_info_header {
+      padding: 15px;
+  }
+
+  .service_info_header h1 {
+      font-size: 2em;
+  }
+
+  .service_info_header h5 {
+      font-size: 1em;
+  }
+
+  h3 {
+      font-size: 1.5em;
+  }
+
+  .like_button {
+      font-size: 1em;
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service_info_header h1 {
+      font-size: 1.6em;
+  }
+
+  .service_info_header h5 {
+      font-size: 0.9em;
+  }
+
+  h3 {
+      font-size: 1.3em;
+  }
+
+
+  .like_button {
+      font-size: 0.9em;
+      padding: 8px 14px;
+  }
+}
+
+
+/* Style the dropdown */
+.field-of-work {
+  width: 100%; /* Full width for responsiveness */
+  padding: 10px; /* Space inside the dropdown */
+  font-size: 16px; /* Font size */
+  color: #333; /* Text color */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f9f9f9; /* Background color */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect */
+.field-of-work:hover {
+  border-color: #888; /* Darker border on hover */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Focus effect */
+.field-of-work:focus {
+  border-color: #4CAF50; /* Highlight border */
+  outline: none; /* Remove default outline */
+  box-shadow: 0px 0px 6px rgba(76, 175, 80, 0.5); /* Green glow */
+}
+
+
+/* Styling for the Return to Registration page link */
+.hello {
+  display: inline-block; /* Makes the link behave like a button */
+  color: #ffffff; /* White text color */
+  background-color: #4CAF50; /* Green background */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Font size for readability */
+  font-weight: bold; /* Emphasized text */
+  padding: 10px 20px; /* Padding for button-like appearance */
+  border-radius: 8px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth hover animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  justify-content: center; 
+  align-items: center; 
+}
+
+.hello:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Dynamic shadow */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.hello:active {
+  background-color: #3e8e41; /* Even darker green when clicked */
+  transform: translateY(1px); /* Slight push effect */
+}
+

@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <title>Basic HTML Page</title>
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO NETFIX PROJECT</h1>
+    </header>
+<nav class="navbar">
+    <a href="{% url 'register' %}">Register</a>
+    <!-- <a href="{% url 'register' %}">Register</a> -->
+    <a href="{% url 'login_user' %}">login</a>
+    <a href="{% url 'logout' %}">Logout</a>
+    <a href="{% if request.user.is_authenticated %}{% url 'singleProfile' user_id=request.user.id %}{% else %}#{% endif %}">profile</a>
+
+    
+  <div class="dropdown">
+    <button class="dropbtn">Filter services</button>
+    <div class="dropdown-content">
+        <a href="{% url 'services_list' %}">by Date</a>
+        <a href="{% url 'top_services' %}">Most Requested Services</a>
+        <a href="{% url 'services_by_category' 'Air Conditioner' %}">Air Conditioner</a>
+        <a href="{% url 'services_by_category' 'Carpentry' %}">Carpentry</a>
+        <a href="{% url 'services_by_category' 'Electricity' %}">Electricity</a>
+        <a href="{% url 'services_by_category' 'Gardening' %}">Gardening</a>
+        <a href="{% url 'services_by_category' 'Home Machines' %}">Home Machines</a>
+        <a href="{% url 'services_by_category' 'House Keeping' %}">House Keeping</a>
+        <a href="{% url 'services_by_category' 'Interior Design' %}">Interior Design</a>
+        <a href="{% url 'services_by_category' 'Locks' %}">Locks</a>
+        <a href="{% url 'services_by_category' 'Painting' %}">Painting</a>
+        <a href="{% url 'services_by_category' 'Plumbing' %}">Plumbing</a>
+        <a href="{% url 'services_by_category' 'Water Heaters' %}">Water Heaters</a>
+       
+        
+    </div>
+  </div> 
+</nav>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    Services List
+{% endblock %}
+{% block content %}
+    
+    
+    {% if user.is_company %}
+        <a class="create_service" href="/services/create"> Create Service</a>
+        
+    {% endif %}
+    <!-- {% if user.is_customer %}
+        <a class="create_service" href="/services/request_service"> Request a service </a>
+    {% endif %} -->
+    <div class='services_list'>
+        {% if services %}
+            {% for service in services %}
+                <div class="service_section">
+                    <p>Name: {{ service.name }}</p>
+                    <p>Description: {{ service.description }}</p>
+                    <p>Price per Hour: {{ service.price_hour }} $</p>
+                    <p>Category: {{ service.field }}</p>
+                    <p>Created on: {{ service.date }}</p>
+                    <a href="{% url 'singleProfile' service.company.user.id %}">
+                        View {{ service.company.user.username }}'s Company Profile
+                    </a>
+                    <br>
+                    <a href="{% url 'single_service' service.id %}"> view service profile</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h2>Sorry, no services available yet.</h2>
+        {% endif %}
+    </div>
+    
+     
+{% endblock %}
